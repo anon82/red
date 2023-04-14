@@ -1,0 +1,36 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import ZBarCam kivy_garden.zbarcam.ZBarCam
+#:import ZBarSymbol pyzbar.pyzbar.ZBarSymbol
+
+MDScreen:
+    name:"User Metrics" 
+    MDBoxLayout:
+        orientation: 'vertical' 
+        MDTopAppBar: 
+            title: "User Metrics - Scroll to View!"
+            mode: 'center'
+        Carousel:
+            direction: 'right' 
+            Image:
+                source: 'userGraphs/graphEnergy.png'
+            Image:
+                source: 'userGraphs/graphSatfats.png'
+            Image:
+                source: 'userGraphs/graphTotalsugar.png'
+            Image:
+                source: 'userGraphs/graphSodium.png'
+            Image:
+                source: 'userGraphs/graphFvn.png'
+            Image:
+                source: 'userGraphs/graphFibrensp.png'
+            Image:
+                source: 'userGraphs/graphFibreaoac.png'
+            Image:
+                source: 'userGraphs/graphProtein.png'
+        MDBottomAppBar:
+            MDTopAppBar:
+                mode: 'center'
+                type: 'bottom'
+                icon: 'home'
+                on_action_button: root.manager.current = "QR Code Reveal Screen"
+                elevation: "0dp"

@@ -1,0 +1,22 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import ZBarCam kivy_garden.zbarcam.ZBarCam
+#:import ZBarSymbol pyzbar.pyzbar.ZBarSymbol
+
+MDScreen:
+    name:"Post Scan Screen" 
+    MDBoxLayout:
+        orientation: 'vertical' 
+        MDTopAppBar: 
+            title: app.descriptionNutrientLabel
+            mode: 'center'
+        MDLabel:
+            text: app.nutrientBreakdownA + app.nutrientBreakdownC
+            valign: 'top'
+            halign: 'center'
+        MDBottomAppBar:
+            MDTopAppBar:
+                mode: 'center'
+                type: 'bottom'
+                icon: 'home'
+                on_action_button: root.manager.current = "QR Code Reveal Screen"
+                elevation: "0dp"
